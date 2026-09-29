@@ -23,7 +23,13 @@
 
 # 📊 Kaggle
 
-تفاصيل Kaggle هنا...
+## Getting Started on Kaggle | Kaggle
+
+[x] 01 How to Enter a Kaggle Competition (using Kernels) | Kaggle
+...
+...
+...
+[ ] 30
 
 ---
 
