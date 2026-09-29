@@ -1,4 +1,4 @@
-name: Update Contribution Graph
+name: Update Contribution Graphs
 
 on:
   push:
@@ -13,10 +13,11 @@ permissions:
   contents: write
 
 jobs:
-  update-graph:
+  update-graphs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -25,24 +26,20 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate contribution graph
+      - name: Generate contribution graphs
         run: |
           python scripts/update_progress.py
 
-      - name: Check changes
-        run: |
-          git status --short
-
-      - name: Commit generated graph
+      - name: Commit generated graphs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add README.md progress.svg
+          git add progress/
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update daily progress graph"
+            git commit -m "chore: update contribution graphs"
             git push
           fi
