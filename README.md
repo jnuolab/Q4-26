@@ -1,8 +1,8 @@
 # Q4-26
 
-[Abu Bakr Soliman](#-Abu-Bakr-Soliman)
-[Hesham Asem](#-Hesham-Asem)
-[Kaggle](#-Kaggle)
+1. [Abu Bakr Soliman](#-Abu-Bakr-Soliman)
+2. [Hesham Asem](#-Hesham-Asem)
+3. [Kaggle](#-Kaggle)
 
 --------------------------------------------------------------------------------------
 # 📦 نظام إدارة التوالف
