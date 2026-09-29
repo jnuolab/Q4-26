@@ -1,16 +1,14 @@
 # Q4-26
 
-## 📊 الإنجازات اليومية
+## 📊 List Contents
 
-![Contribution Graph](./contribution-graph.svg)
-
----
 
 ## 📚 المحتويات
 
 1. [Abu Bakr Soliman](#abu-bakr-soliman)
 2. [Hesham Asem](#hesham-asem)
 3. [Kaggle](#kaggle)
+4. [Ken Jee](#ken-jee)
 
 ---
 
@@ -29,3 +27,9 @@
 # 📊 Kaggle
 
 تفاصيل Kaggle هنا...
+
+---
+
+# 👤 Ken Jee
+
+تفاصيل الإنجازات هنا...
