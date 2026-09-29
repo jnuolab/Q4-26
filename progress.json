@@ -1,47 +1,24 @@
 {
-  "2026-09-29": {
-    "python": 4,
-    "machine-learning": 2,
-    "llms": 3,
-    "kaggle": 4,
-    "data-science": 1,
-    "english": 2,
-    "flutter": 0,
-    "dart": 1,
-    "fastapi": 3,
-    "nodejs": 2,
-    "databases": 1,
-    "system-design": 0,
-    "transformers": 2,
-    "embeddings": 3,
-    "rag": 4,
-    "llm-agents": 1,
-    "fine-tuning": 0,
-    "local-llms": 2
+  "activities": {
+    "python": {
+      "name": "Python",
+      "icon": "🐍"
+    },
+    "kaggle": {
+      "name": "Kaggle",
+      "icon": "🏆"
+    },
+    "rag": {
+      "name": "RAG",
+      "icon": "🔎"
+    }
   },
 
-  "2026-09-28": {
-    "python": 2,
-    "machine-learning": 1,
-    "llms": 3,
-    "kaggle": 2,
-    "english": 1,
-    "nodejs": 4,
-    "databases": 2,
-    "rag": 3
-  },
-
-  "2026-09-27": {
-    "python": 3,
-    "llms": 2,
-    "kaggle": 4,
-    "data-science": 1,
-    "english": 2,
-    "flutter": 1,
-    "dart": 1,
-    "transformers": 1,
-    "embeddings": 1,
-    "rag": 2,
-    "local-llms": 1
+  "days": {
+    "2026-09-29": {
+      "python": 4,
+      "kaggle": 3,
+      "rag": 4
+    }
   }
 }
