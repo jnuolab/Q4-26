@@ -1,0 +1,27 @@
+{
+  "2026-09-29": {
+    "level": 4,
+    "tasks": [
+      "Kaggle — 30 minutes",
+      "Python practice",
+      "Mini RAG debugging",
+      "Q4-26 README improvement"
+    ]
+  },
+  "2026-09-28": {
+    "level": 3,
+    "tasks": [
+      "Damage Management System",
+      "Node.js debugging",
+      "Git practice"
+    ]
+  },
+  "2026-09-27": {
+    "level": 3,
+    "tasks": [
+      "Kaggle exploration",
+      "Markdown practice",
+      "Git branches"
+    ]
+  }
+}
