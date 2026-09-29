@@ -1,45 +1,47 @@
 {
   "2026-09-29": {
-    "level": 4,
-    "tasks": [
-      "Kaggle — 30 minutes",
-      "Python practice",
-      "Mini RAG debugging",
-      "Q4-26 README improvement"
-    ]
+    "python": 4,
+    "machine-learning": 2,
+    "llms": 3,
+    "kaggle": 4,
+    "data-science": 1,
+    "english": 2,
+    "flutter": 0,
+    "dart": 1,
+    "fastapi": 3,
+    "nodejs": 2,
+    "databases": 1,
+    "system-design": 0,
+    "transformers": 2,
+    "embeddings": 3,
+    "rag": 4,
+    "llm-agents": 1,
+    "fine-tuning": 0,
+    "local-llms": 2
   },
+
   "2026-09-28": {
-    "level": 3,
-    "tasks": [
-      "Damage Management System",
-      "Node.js debugging",
-      "Git practice"
-    ]
+    "python": 2,
+    "machine-learning": 1,
+    "llms": 3,
+    "kaggle": 2,
+    "english": 1,
+    "nodejs": 4,
+    "databases": 2,
+    "rag": 3
   },
+
   "2026-09-27": {
-    "level": 3,
-    "tasks": [
-      "Kaggle exploration",
-      "Markdown practice",
-      "Git branches"
-    ]
-  },
-  "2026-09-26": {
-    "level": 2,
-    "tasks": [
-      "10M Typing"
-    ]
-  },
-  "2026-09-25": {
-    "level": 1,
-    "tasks": [
-      "10M Typing"
-    ]
-  },
-  "2026-09-24": {
-    "level": 0,
-    "tasks": [
-      "10M Typing"
-    ]
+    "python": 3,
+    "llms": 2,
+    "kaggle": 4,
+    "data-science": 1,
+    "english": 2,
+    "flutter": 1,
+    "dart": 1,
+    "transformers": 1,
+    "embeddings": 1,
+    "rag": 2,
+    "local-llms": 1
   }
 }
