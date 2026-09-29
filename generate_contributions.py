@@ -1,12 +1,26 @@
 import subprocess
-from datetime import datetime, timedelta
+from datetime import date, timedelta
 from collections import Counter
 
 
 OUTPUT = "contribution-graph.svg"
 
-DAYS = 365
+WEEKS = 53
 
+CELL_SIZE = 12
+CELL_GAP = 3
+
+LEFT_MARGIN = 35
+TOP_MARGIN = 35
+BOTTOM_MARGIN = 35
+
+MONTH_LABEL_HEIGHT = 20
+DAY_LABEL_WIDTH = 30
+
+
+# --------------------------------------------------
+# Get git commits
+# --------------------------------------------------
 
 def get_commits():
     result = subprocess.run(
@@ -25,56 +39,92 @@ def get_commits():
     return result.stdout.splitlines()
 
 
-def build_data():
+# --------------------------------------------------
+# Count commits per day
+# --------------------------------------------------
+
+def build_commit_data():
+
     commits = get_commits()
 
     counter = Counter()
 
-    for date in commits:
+    for commit_date in commits:
+
         try:
-            datetime.strptime(date, "%Y-%m-%d")
-            counter[date] += 1
+            parsed = date.fromisoformat(commit_date)
+            counter[parsed] += 1
+
         except ValueError:
             pass
 
-    today = datetime.today().date()
+    return counter
 
-    data = []
 
-    for i in range(DAYS - 1, -1, -1):
-        day = today - timedelta(days=i)
-
-        date = day.strftime("%Y-%m-%d")
-
-        data.append(
-            {
-                "date": date,
-                "count": counter.get(date, 0),
-            }
-        )
-
-    return data
-
+# --------------------------------------------------
+# Get level
+# --------------------------------------------------
 
 def get_level(count):
+
     if count == 0:
         return 0
-    elif count == 1:
+
+    if count == 1:
         return 1
-    elif count <= 3:
+
+    if count <= 3:
         return 2
-    elif count <= 6:
+
+    if count <= 6:
         return 3
-    else:
-        return 4
+
+    return 4
 
 
-def generate_svg(data):
-    cell = 14
-    gap = 4
+# --------------------------------------------------
+# GitHub-like colors
+# --------------------------------------------------
 
-    width = 53 * (cell + gap)
-    height = 7 * (cell + gap) + 40
+COLORS = [
+    "#ebedf0",
+    "#9be9a8",
+    "#40c463",
+    "#30a14e",
+    "#216e39",
+]
+
+
+# --------------------------------------------------
+# Generate SVG
+# --------------------------------------------------
+
+def generate_svg(counter):
+
+    today = date.today()
+
+    # Start from Sunday
+    start = today - timedelta(
+        days=today.weekday() + 1
+    )
+
+    # Go back 52 weeks
+    start -= timedelta(
+        weeks=WEEKS - 1
+    )
+
+    total_days = WEEKS * 7
+
+    width = (
+        LEFT_MARGIN
+        + WEEKS * (CELL_SIZE + CELL_GAP)
+    )
+
+    height = (
+        TOP_MARGIN
+        + 7 * (CELL_SIZE + CELL_GAP)
+        + BOTTOM_MARGIN
+    )
 
     svg = f'''<svg
 xmlns="http://www.w3.org/2000/svg"
@@ -82,69 +132,244 @@ width="{width}"
 height="{height}"
 viewBox="0 0 {width} {height}">
 
+<style>
+
+.day {{
+    font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+
+    font-size: 10px;
+
+    fill: #57606a;
+}}
+
+.month {{
+    font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+
+    font-size: 10px;
+
+    fill: #57606a;
+}}
+
+.cell {{
+    stroke: rgba(27,31,36,0.06);
+    stroke-width: 1;
+}}
+
+</style>
+
 <text
 x="0"
-y="20"
-font-family="Arial"
-font-size="14">
+y="12"
+font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
+font-size="14"
+font-weight="600"
+fill="#24292f">
 Q4-26 Contributions
 </text>
 '''
 
-    start_date = datetime.strptime(
-        data[0]["date"],
-        "%Y-%m-%d"
-    ).date()
+    # --------------------------------------------------
+    # Day labels
+    # --------------------------------------------------
 
-    # Align to Sunday
-    start_date -= timedelta(
-        days=(start_date.weekday() + 1) % 7
+    day_labels = {
+        1: "Mon",
+        3: "Wed",
+        5: "Fri",
+    }
+
+    for row, label in day_labels.items():
+
+        y = (
+            TOP_MARGIN
+            + row * (CELL_SIZE + CELL_GAP)
+            + CELL_SIZE - 2
+        )
+
+        svg += f'''
+<text
+class="day"
+x="0"
+y="{y}">
+{label}
+</text>
+'''
+
+    # --------------------------------------------------
+    # Month labels
+    # --------------------------------------------------
+
+    previous_month = None
+
+    for week in range(WEEKS):
+
+        week_date = start + timedelta(
+            weeks=week
+        )
+
+        month = week_date.month
+
+        if month != previous_month:
+
+            x = (
+                LEFT_MARGIN
+                + week * (CELL_SIZE + CELL_GAP)
+            )
+
+            month_name = week_date.strftime("%b")
+
+            svg += f'''
+<text
+class="month"
+x="{x}"
+y="{TOP_MARGIN - 10}">
+{month_name}
+</text>
+'''
+
+            previous_month = month
+
+    # --------------------------------------------------
+    # Contribution cells
+    # --------------------------------------------------
+
+    for week in range(WEEKS):
+
+        for row in range(7):
+
+            current_date = (
+                start
+                + timedelta(
+                    weeks=week,
+                    days=row,
+                )
+            )
+
+            # Don't draw future days
+            if current_date > today:
+                continue
+
+            count = counter.get(
+                current_date,
+                0,
+            )
+
+            level = get_level(count)
+
+            x = (
+                LEFT_MARGIN
+                + week * (CELL_SIZE + CELL_GAP)
+            )
+
+            y = (
+                TOP_MARGIN
+                + row * (CELL_SIZE + CELL_GAP)
+            )
+
+            color = COLORS[level]
+
+            formatted_date = current_date.strftime(
+                "%b %d, %Y"
+            )
+
+            commit_text = (
+                "commit"
+                if count == 1
+                else "commits"
+            )
+
+            tooltip = (
+                f"{formatted_date}: "
+                f"{count} {commit_text}"
+            )
+
+            svg += f'''
+<rect
+class="cell"
+x="{x}"
+y="{y}"
+width="{CELL_SIZE}"
+height="{CELL_SIZE}"
+rx="2"
+fill="{color}">
+
+<title>{tooltip}</title>
+
+</rect>
+'''
+
+    # --------------------------------------------------
+    # Legend
+    # --------------------------------------------------
+
+    legend_y = (
+        TOP_MARGIN
+        + 7 * (CELL_SIZE + CELL_GAP)
+        + 10
     )
 
-    for item in data:
-        date = datetime.strptime(
-            item["date"],
-            "%Y-%m-%d"
-        ).date()
+    svg += f'''
+<text
+class="day"
+x="{LEFT_MARGIN}"
+y="{legend_y + 10}">
+Less
+</text>
+'''
 
-        diff = (date - start_date).days
+    legend_start = LEFT_MARGIN + 30
 
-        column = diff // 7
-        row = diff % 7
+    for i, color in enumerate(COLORS):
 
-        x = column * (cell + gap)
-        y = row * (cell + gap) + 30
-
-        level = get_level(item["count"])
-
-        classes = [
-            "#ebedf0",
-            "#9be9a8",
-            "#40c463",
-            "#30a14e",
-            "#216e39",
-        ]
+        x = (
+            legend_start
+            + i * (CELL_SIZE + CELL_GAP)
+        )
 
         svg += f'''
 <rect
+class="cell"
 x="{x}"
-y="{y}"
-width="{cell}"
-height="{cell}"
+y="{legend_y}"
+width="{CELL_SIZE}"
+height="{CELL_SIZE}"
 rx="2"
-fill="{classes[level]}">
-<title>{item["date"]}: {item["count"]} commits</title>
+fill="{color}">
 </rect>
+'''
+
+    svg += f'''
+<text
+class="day"
+x="{legend_start + 5 * (CELL_SIZE + CELL_GAP) + 5}"
+y="{legend_y + 10}">
+More
+</text>
 '''
 
     svg += "</svg>"
 
-    with open(OUTPUT, "w", encoding="utf-8") as file:
+    with open(
+        OUTPUT,
+        "w",
+        encoding="utf-8",
+    ) as file:
+
         file.write(svg)
 
 
-if __name__ == "__main__":
-    data = build_data()
-    generate_svg(data)
+# --------------------------------------------------
+# Main
+# --------------------------------------------------
 
-    print(f"Generated {OUTPUT}")
+if __name__ == "__main__":
+
+    counter = build_commit_data()
+
+    generate_svg(counter)
+
+    print(
+        f"✓ Generated {OUTPUT}"
+    )
