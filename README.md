@@ -1,8 +1,5 @@
 # Q4-26
 
-## 📊 List Contents
-
-
 ## 📚 المحتويات
 
 1. [Abu Bakr Soliman](#abu-bakr-soliman)
