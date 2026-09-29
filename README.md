@@ -1,6 +1,6 @@
 # Q4-26
 
-## 📚 المحتويات
+## 📚 Contents
 
 1. [Abu Bakr Soliman](#abu-bakr-soliman)
 2. [Hesham Asem](#hesham-asem)
@@ -9,19 +9,19 @@
 
 ---
 
-# 👤 Abu Bakr Soliman
+# Abu Bakr Soliman
 
 تفاصيل الإنجازات هنا...
 
 ---
 
-# 👤 Hesham Asem
+# Hesham Asem
 
 تفاصيل الإنجازات هنا...
 
 ---
 
-# 📊 Kaggle
+# Kaggle
 
 ## Getting Started on Kaggle | Kaggle
 
