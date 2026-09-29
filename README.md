@@ -16,7 +16,7 @@
 
 ### 📚 Learning
 
-- [ ] Python
+- [ ] [Python](#-python)
 - [ ] Machine Learning
 - [ ] LLMs
 - [ ] Kaggle
@@ -100,6 +100,10 @@
 - Software Engineering
 - Flutter
 - English
+
+---
+
+# 🐍 Python
 
 ---
 
