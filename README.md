@@ -1,10 +1,66 @@
 # Q4-26
 
-1. [Abu Bakr Soliman](#-Abu-Bakr-Soliman)
-2. [Hesham Asem](#-Hesham-Asem)
-3. [Kaggle](#-Kaggle)
+## 📚 المحتويات
 
---------------------------------------------------------------------------------------
+1. [Abu Bakr Soliman](#abu-bakr-soliman)
+2. [Hesham Asem](#hesham-asem)
+3. [Kaggle](#kaggle)
+
+---
+
+# 👤 Abu Bakr Soliman
+
+تفاصيل Abu Bakr Soliman هنا...
+
+### 📌 المهام
+
+- مهمة 1
+- مهمة 2
+- مهمة 3
+
+[⬆️ العودة إلى الأعلى](#q4-26)
+
+---
+
+# 👤 Hesham Asem
+
+تفاصيل Hesham Asem هنا...
+
+### 📌 المهام
+
+- مهمة 1
+- مهمة 2
+- مهمة 3
+
+[⬆️ العودة إلى الأعلى](#q4-26)
+
+---
+
+# 📊 Kaggle
+
+تفاصيل Kaggle هنا...
+
+### 📚 ما تم تعلمه
+
+- Kaggle Overview
+- Competitions
+- Datasets
+- Notebooks
+- Models
+- Submissions
+
+### 📝 المهام
+
+- [ ] استكشاف Kaggle لمدة 30 دقيقة
+- [ ] استكشاف Competitions
+- [ ] استكشاف Datasets
+- [ ] تجربة Notebook
+- [ ] المشاركة في Competition
+
+[⬆️ العودة إلى الأعلى](#q4-26)
+
+---
+
 # 📦 نظام إدارة التوالف
 
 ## 📚 المحتويات
@@ -54,4 +110,4 @@
 
 ---
 
-## Kaggle
+[⬆️ العودة إلى الأعلى](#q4-26)
