@@ -1,6 +1,6 @@
 # Q4-26
 
-## 📚 Contents
+## Contents
 
 1. [Abu Bakr Soliman](#abu-bakr-soliman)
 2. [Hesham Asem](#hesham-asem)
