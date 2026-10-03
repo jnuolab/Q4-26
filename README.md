@@ -6,12 +6,7 @@
 2. [Hesham Asem](#hesham-asem)
 3. [Kaggle](#kaggle)
 4. [Ken Jee](#ken-jee)
-
----
-
-## Black Point
-- [x] 01/10/2026
-- [x] 03/10/2026
+5. [Black Point](#black-point)
 
 ---
 
@@ -39,8 +34,16 @@
 - ...
 - [ ] 30
 
+
+
 ---
 
 # Ken Jee
 
 تفاصيل الإنجازات هنا...
+
+---
+
+# Black Point
+- [x] 01/10/2026
+- [x] 03/10/2026
