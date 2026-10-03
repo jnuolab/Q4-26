@@ -10,9 +10,9 @@
 
 ---
 
-# Abu Bakr Soliman
+# Abu Bakr Soliman [Link](https://www.youtube.com/@bakrianoo)
 
-## Build an LLM from Scratch with Pytorch
+## Build an LLM from Scratch with Pytorch [Link](https://www.youtube.com/watch?v=pLZnFD4QVXY)
 
 - [x] EP:00 Introduction | Build an LLM from Scratch with Pytorch | 03/10/2026
 - [x] EP:01 Dataset Exploration | Build an LLM from Scratch with Pytorch | 03/10/2026
