@@ -14,8 +14,8 @@
 
 ## Build an LLM from Scratch with Pytorch
 
-- [x] EP:00 Introduction | Build an LLM from Scratch with Pytorch
-- [ ] EP:01 
+- [x] EP:00 Introduction | Build an LLM from Scratch with Pytorch | 03/10/2026
+- [x] EP:01 Dataset Exploration | Build an LLM from Scratch with Pytorch | 03/10/2026
 ---
 
 # Hesham Asem
