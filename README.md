@@ -9,6 +9,12 @@
 
 ---
 
+## Black Point
+- [x] 01/10/2026
+- [x] 03/10/2026
+
+---
+
 # Abu Bakr Soliman
 
 ## Build an LLM from Scratch with Pytorch
