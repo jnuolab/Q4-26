@@ -16,17 +16,20 @@
 
 - [x] EP:00 Introduction | Build an LLM from Scratch with Pytorch | 03/10/2026
 - [x] EP:01 Dataset Exploration | Build an LLM from Scratch with Pytorch | 03/10/2026
+- [ ] EP:02
+- [ ] 
 ---
 
-# Hesham Asem
+# Hesham Asem [Link](https://www.youtube.com/@HeshamAsem)
 
-تفاصيل الإنجازات هنا...
+## 01 machine learning تعليم الآلة , القسم الأول : مقدمة
+- [ ] EP:00
 
 ---
 
 # Kaggle
 
-## Getting Started on Kaggle | Kaggle
+## Getting Started on Kaggle | Kaggle 
 
 - [x] 01 How to Enter a Kaggle Competition (using Kernels) | 01-10-2026
 - ...
