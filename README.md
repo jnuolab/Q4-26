@@ -11,8 +11,10 @@
 
 # Abu Bakr Soliman
 
-تفاصيل الإنجازات هنا...
+## Build an LLM from Scratch with Pytorch
 
+- [x] EP:00 Introduction | Build an LLM from Scratch with Pytorch
+- [ ] EP:01 
 ---
 
 # Hesham Asem
