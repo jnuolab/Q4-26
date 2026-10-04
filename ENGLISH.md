@@ -42,9 +42,10 @@
 
 - [ ] 01 Eye contact is crucial!
 
+> So, bottom line, to be very honest, if
+>you don't maintain eye contact with your
+
 ```bash
-So, bottom line, to be very honest, if
-you don't maintain eye contact with your
 audience or your you know, the person
 you're speaking to, your words mean
 absolutely nothing. The reason being is
