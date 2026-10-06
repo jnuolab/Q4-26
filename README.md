@@ -59,4 +59,4 @@
 
 # Mostafa Hosny
 
-- [ ] **The Complete Seerah of the Prophet Muhammad ﷺ – Noor **
+- [ ] **The Complete Seerah of the Prophet Muhammad ﷺ – Noor ** 01:30:00
