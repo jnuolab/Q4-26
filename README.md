@@ -7,7 +7,7 @@
 3. [Kaggle](#kaggle)
 4. [Ken Jee](#ken-jee)
 5. [Black Point](#black-point)
-6. [Mostafa Hosny](#mostafa-hosny)**The Complete Seerah of the Prophet Muhammad ﷺ – Noor **
+6. [Mostafa Hosny](#mostafa-hosny)
 
 ---
 
@@ -46,12 +46,17 @@
 
 ---
 
-# Mostafa Hosny
-
-تفاصيل الإنجازات هنا...
+- [ ] ...
 
 ---
 
 # Black Point
+
 - [x] 01/10/2026
 - [x] 03/10/2026
+
+---
+
+# Mostafa Hosny
+
+- [ ] **The Complete Seerah of the Prophet Muhammad ﷺ – Noor **
