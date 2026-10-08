@@ -59,6 +59,6 @@
 
 # Mostafa Hosny 
 
-from 01/10/2026 to 00/00/2026 [00:00:00]
+from 01/10/2026 to 00/00/2026 [04:05:00]
 
 - [ ] **The Complete Seerah of the Prophet Muhammad ﷺ – Noor ** 01:30:00
